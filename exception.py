@@ -6,14 +6,30 @@
 # raise: Used to throw exceptions manually.
 # This approach helps in managing and controlling errors
 
-try:
+try: 
+    #print(10/0) 
+    print("Outer try") 
+    try: 
+        print(10/0) 
+        print("Inner try") 
+    except ValueError: 
+        print("Inner except") 
+    finally: 
+        print("Inner finally") 
+except: 
+    print("Outer except") 
+finally: 
+    print("Outer finally")
+
+
+"""try:
     file = open('myfile.txt', 'w')
     file.write('Hello, world!')
 except IOError as ex:
     print(f"Error occurred: {ex}")
 finally:
     print("Cleaning up...")
-    file.close() 
+    file.close()"""
 
 # types of errors 
 1) Syntax Errors
